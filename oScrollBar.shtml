@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oScrollBar / 自定义滚动条</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+    <style>
+        .list{height:110px;width:315px;border:1px solid #ccc}
+        .list p{padding:10px 0 10px 10px}
+    </style>
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>oScrollBar / 自定义滚动条</h1>
+<div class="list ">
+    <p class="js_list">
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+    </p>
+</div>
+<div class="list ">
+    <p class="js_list">
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+        我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+    </p>
+</div>
+<pre>
+    &lt;!--START 样式--&gt;
+    &lt;style&gt;
+        .list{height:110px;}重点 : 父元素必须有高度
+   &lt;/style&gt;
+
+    &lt;!--START html--&gt;
+    &lt;div class=&quot;list &quot;&gt;
+        &lt;p class=&quot;js_list&quot;&gt;
+            我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+            我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁
+            我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁我不告诉你我是谁end
+        &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+    var bar=$(".js_list").oScrollBar();//创建滚动条
+    bar.init();//初始化激活滚动条
+    其他参数
+    moveFn:function(s){}//滚动条变化时回调函数 参数：s（当前滚动位置）
+</pre>
+<pre>
+   obox_set.less 配置滚动条ui
+   @sbar_w:35px;//滚动条盒子宽度
+   @sbar_linewidth:1px;//线宽度
+   @sbar_mt:15px;//上下间距
+   @sbar_linecolor:#eee;//线颜色
+   @sbar_barcolor:black;
+   @sbar_barw:5px;//滚动条宽度
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script>
+    var bar=$(".js_list").oScrollBar({
+        moveFn:function(a){
+            console.log(a)
+        }
+    });//创建滚动条
+    bar.init();//初始化激活滚动条
+    $(".js_list").on("click",function(){
+        alert(1)
+        return false;
+    })
+</script>
+</body>
+</html>

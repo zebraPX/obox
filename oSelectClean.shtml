@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="public/head.shtml"-->
+
+</head>
+
+<body>
+    <!--#include file="public/header.shtml"-->
+    <!--START 主要内容-->
+    <!--START 主要内容-->
+    <h1>下拉菜单</h1>
+    <div>
+        <select name="" id="select3" autotext="请选择省">
+            <!-- <option value="0">--请选择省--</option> -->
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">山东</option>
+            <option value="4">广州</option>
+            <option value="5">四川</option>
+        </select>
+        <select name="" id="select4" autotext="请选择城市">
+            <!-- <option value="0">--请选择城市--</option> -->
+            <option value="1">青岛</option>
+            <option value="2">济南</option>
+            <option value="3">威海</option>
+            <option value="4">烟台</option>
+        </select>
+        <select name="" id="select5" autotext="请选择城市">
+            <!-- <option value="0">--请选择城市--</option> -->
+            <option value="1">青岛</option>
+            <option value="2">济南</option>
+            <option value="3">威海</option>
+            <option value="4">烟台</option>
+        </select>
+    </div>
+   
+
+
+
+    <pre>//下拉菜单ui设置 (文件:o_set.less)
+    @select_arrowcolor:#333; //箭头颜色
+    @select_arrowfont:iconfont; //箭头字体
+    @select_arrowfont_code:"\e655";//箭头字体代码
+    @select_arrowsize:12px;
+    @select_bordercolor:#ccc; //边框颜色
+    @select_height:50px; //高度
+    @select_p_left:15px; //选项左右间距
+    @select_color:#666; //默认文字颜色
+    @select_hoverbgcolor:#ededed; //hover颜色
+    @select_selectedbgcolor:black; //选中颜色
+    @select_selectedcolor:white; //选中文字颜色
+    @select_losebgcolor:#efefef;//失效背景颜色
+    @select_losecolor:#999;//失效文字颜色
+    @select_groupcolor:black;//大类文字颜色
+    </pre>
+
+
+    <!-- END 主要内容-->
+    <!--#include file="public/footer.shtml"-->
+
+    <script>
+
+        var s3=$("#select3").oSelectClean();
+        s3.init()
+        var s4=$("#select4").oSelectClean();
+
+        $("#select3").on("change",function(){
+            s4.init()
+        })
+        
+        var s5=$("#select5").oSelectClean({
+            clean:false
+        });
+        s5.init()
+    
+
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oScrollFn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>oScrollFn / 滚轮事件</h1>
+<div class="js_obj" style="background:#e543ae;height:200px;line-height:200px;font-size:32px;text-align: center;color:white">滚动区域</div>
+<p class="js_text"></p>
+<pre>
+    &lt;div class=&quot;js_obj&quot; &gt;滚动区域&lt;/div&gt;
+</pre>
+<pre>
+  $(".js_obj").oScrollFn({
+        upFn:function(){
+           $(".js_text").html($(".js_text").html()+"<span style='color:red'> 上滚 </span>")
+        },
+        downFn:function(){
+            $(".js_text").html($(".js_text").html()+"<span style='color:green'> 下滚 </span>")
+        }
+    });
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script>
+    $(".js_obj").oScrollFn({
+        upFn:function(){
+           $(".js_text").html($(".js_text").html()+"<span style='color:red'> 上滚 </span>")
+        },
+        downFn:function(){
+            $(".js_text").html($(".js_text").html()+"<span style='color:green'> 下滚 </span>")
+        }
+    });
+</script>
+</body>
+</html>

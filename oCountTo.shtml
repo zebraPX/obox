@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+   
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>oCountTo / 计数</h1>
+<!-- 倒计时 -->
+<h2>倒计时: <span class="timer count-title"  o-to="0" o-from="10"  o-time="10000" o-speed="1000">10</span></h2>
+
+<textarea class="o_pre">
+       <span class="timer count-title"  o-to="0" o-from="10"  o-time="10000" o-speed="1000">10</span>
+</textarea>
+<pre>
+    //初始化 计数器
+    var timer=$(".timer").oCountTo({
+        callback:function(self){
+            self.after("结束");
+        }
+    })
+    //计数开始
+    timer.init();
+</pre>
+<!-- 计数1 -->
+<h2>计数累加效果: <span class="jishu count-title" o-to="347342934" o-from="0" o-time="2000" o-speed="100">0</span></h2>
+<textarea class="o_pre">
+        <span class="jishu count-title" o-to="347342934" o-from="0" o-time="2000" o-speed="100">0</span>
+</textarea>
+<pre>
+        //初始化 计数器
+        var jishu=$(".jishu").oCountTo({
+            callback:function(self){
+                self.after("结束");
+            }
+        })
+        //计数开始
+        jishu.init();
+</pre>
+
+<!-- 计数2 -->
+<h2>美化计数累加效果: <span class="jishu2 count-title" o-to="347342934" o-from="0" o-time="2000" o-speed="100">0</span></h2>
+
+<textarea name="" id=""   class="o_pre">
+        <span class="jishu2 count-title" o-to="347342934" o-from="0" o-time="2000" o-speed="100">0</span>
+</textarea>
+<pre>
+        //初始化 计数器
+        var jishu2=$(".jishu2").oCountTo({
+            beautiful:true,
+            callback:function(self){
+                self.after("结束");
+            }
+        })
+        //计数开始
+        jishu2.init();
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+</body>
+<script>
+    //初始化 计数器
+    var timer=$(".timer").oCountTo({
+        callback:function(self){
+            self.after("<p style='color:red'>结束</p>");
+        }
+    })
+    //计数开始
+    timer.init();
+
+    //初始化 计数器
+    var jishu=$(".jishu").oCountTo({
+        callback:function(self){
+            self.after("<p style='color:red'>结束</p>");
+        }
+    })
+    //计数开始
+    jishu.init();
+
+    //初始化 计数器
+    var jishu2=$(".jishu2").oCountTo({
+        beautiful:true,
+        callback:function(self){
+            self.after("<p style='color:red'>结束</p>");
+        }
+    })
+    //计数开始
+    jishu2.init();
+
+
+</script>
+</html>

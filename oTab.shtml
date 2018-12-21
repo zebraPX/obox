@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oTab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+    <style>
+    .o_tab{height:60px;border-bottom:1px solid #eee;font-size:0;text-align: center}
+.o_tab li{display:inline-block;cursor:pointer;vertical-align: top}
+.o_tab li span{line-height: 59px;font-size:16px;color:#999;padding:0 50px;display:inline-block;padding:0 60px;}
+.o_tab li.cur span{border-bottom:2px solid #32beff;color:#32beff}
+.box{height:300px;line-height:300px;border:1px solid #eee;font-size:30px;text-align: center;margin-top:10px}
+    </style>
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>切换标签</h1>
+<!-- 切换标签 -->
+    <ul class="o_tab" o-target=".js_tabbox">
+        <li class="cur"><span>商品详情</span></li>
+        <li><span>商品评价 </span></li>
+        <li><span>出价记录</span></li>
+    </ul>
+<!-- 切换内容 -->
+    <div  class="js_tabbox box">商品详情</div>
+    <div  class="js_tabbox box">商品评价</div>
+    <div  class="js_tabbox box">出价记录</div>
+
+<pre>
+    &lt;!-- 切换标签 --&gt;
+    &lt;ul class=&quot;o_tab&quot; o-target=&quot;.js_tabbox&quot;&gt;
+        &lt;li class=&quot;cur&quot;&gt;&lt;span&gt;商品详情&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;商品评价 &lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;出价记录&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;!-- 切换内容 --&gt;
+    &lt;div  class=&quot;js_tabbox box&quot;&gt;商品详情&lt;/div&gt;
+    &lt;div  class=&quot;js_tabbox box&quot;&gt;商品评价&lt;/div&gt;
+    &lt;div  class=&quot;js_tabbox box&quot;&gt;出价记录&lt;/div&gt;
+</pre>
+
+<pre>
+    1. tab 添加 “o_tab” class 
+    2. 属性 “o_target” 写入要切换的盒子class名
+    3. 不需要写js
+</pre>
+
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+
+</body>
+</html>

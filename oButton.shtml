@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oButton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>按钮</h1>
+<p>
+    按钮 需要定义 尺寸&样式两个属性<br>
+    样式：o_linebtnbase / o_bgbtnbase / o_linebtn1 / o_bgbtn1 /o_linebtn2 / o_bgbtn2<br>
+    尺寸：df（中）/ sm （小）/ xl（大）
+</p>
+<div class="row">
+    <a href="" class="o_linebtnbase o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_linebtnbase o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_linebtnbase o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtnbase o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtnbase o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtnbase o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_bgbtnbase o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_bgbtnbase o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_bgbtnbase o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtnbase o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtnbase o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtnbase o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_linebtn1 o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_linebtn1 o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_linebtn1 o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn1 o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn1 o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn1 o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_bgbtn1 o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_bgbtn1 o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_bgbtn1 o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn1 o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn1 o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn1 o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_linebtn2 o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_linebtn2 o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_linebtn2 o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn2 o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn2 o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_linebtn2 o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_bgbtn2 o_lose o_btn_df-sm"><span>btn尺寸sm</span></a>
+    <a href="" class="o_bgbtn2 o_btn_df-df"><span>btn尺寸df</span></a>
+    <a href="" class="o_bgbtn2 o_btn_df-xl"><span>btn尺寸xl</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn2 o_lose o_btn_df-sm&quot;&gt;&lt;span&gt;btn尺寸sm&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn2 o_btn_df-df&quot;&gt;&lt;span&gt;btn尺寸df&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn2 o_btn_df-xl&quot;&gt;&lt;span&gt;btn尺寸xl&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<div class="row">
+    <a href="" class="o_bgbtn1 o_btn_xs-sm o_btn_lg-xl o_btn_df-df"><span>主颜色</span></a>
+</div>
+<pre>
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;o_bgbtn1 o_btn_xs-sm o_btn_lg-xl o_btn_df-df&quot;&gt;&lt;span&gt;主颜色&lt;/span&gt;&lt;i class=&quot;o-cog&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+
+<pre>
+//按钮颜色参数
+    @btn1_bgcolor:#a88747; //主颜色
+    @btn1_color:white; //文字颜色
+    @btn1_hovercolor:#a88747; //hover颜色
+
+    @btn2_bgcolor:#6f3a8a; //辅助色
+    @btn2_color:white; //文字颜色
+    @btn2_hovercolor:#80429f; //hover颜色
+
+    @btn_losebgcolor:#666; //失效颜色
+    @btn_losecolor:#999; //失效颜色
+
+    //按钮大小参数 分s/df/xl三个尺寸
+    @btn_s:30px; //高度
+    @btn_s_padding:15px; //填充
+    @btn_s_font:12px;//文字大小
+    @btn_s_icopadding:8px;//图标padding
+
+    @btn_df:38px; //高度
+    @btn_df_padding:20px;
+    @btn_df_font:14px;//文字大小
+    @btn_df_icopadding:11px;//图标padding
+
+    @btn_big:48px; //高度
+    @btn_big_padding:45px;
+    @btn_big_font:16px;//文字大小
+    @btn_big_icopadding:15px;//图标padding
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+</body>
+</html>

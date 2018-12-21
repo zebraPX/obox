@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oScrollLoad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <style>
+        .listbox {
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px solid red
+        }
+
+        .list li {
+            line-height: 40px;
+            border: 2px solid #ccc;
+            margin-bottom: 10px
+        }
+
+        /* .contbox{height:auto!important}
+        body{overflow:visible!important} */
+    </style>
+    <!--#include file="public/head.shtml"-->
+</head>
+
+<body>
+    <!--#include file="public/header.shtml"-->
+    <!--START 主要内容-->
+    <h1>oScrollLoad/滚动加载</h1>
+    <div class="listbox">
+        <ul class="list">
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                <p>内容</p>
+            </li>
+            <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                    <p>内容</p>
+                </li>
+                <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                        <p>内容</p>
+                    </li>
+                    <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>内容</p>
+                        </li>
+                        <li>
+                            <p>最后</p>
+                        </li>
+        </ul>
+    </div>
+    <pre>
+    var listScroll=$(&quot;.listbox&quot;).oScrollLoad({
+            BottomFn:function(){
+                var li=$(&quot;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;1&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;sdfsdfsdfs&lt;/p&gt;&lt;/li&gt;&quot;);
+                $(&quot;.listbox .list&quot;).append(li);
+              
+            },
+            TopFn:function(){
+                console.log(&quot;到顶了&quot;)
+            }
+        });
+
+        //其他参数 
+         df:false,节点下是否有滚动加载效果
+         xs:true,
+         sm:true,
+         md:true,
+    <!-- END 主要内容-->
+    <!--#include file="public/footer.shtml"-->    <script>
+        $(function(){
+            setTimeout(function(){
+         
+    var listScroll=$(".listbox").oScrollLoad({
+            BottomFn:function(){
+                var li=$("<li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>1</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li><li><p>sdfsdfsdfs</p></li>");
+                $(".listbox .list").append(li);
+              
+            },
+            TopFn:function(){
+                console.log("到顶了")
+            }
+        });
+            var windowScroll=$(window).oScrollLoad({
+                df:false,
+                xs:true,
+                sm:true,
+                md:true,
+                BottomFn:function(){
+                    console.log("全到底了")
+                },
+                TopFn:function(){
+                    console.log("全到顶了")
+                }
+            });
+    },200)
+     
+        $(".listbox li").on("click",function(){
+            alert(1)
+        });
+        })
+    
+    </script>
+</body>
+
+</html>

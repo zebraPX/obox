@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oPopup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>弹层</h1>
+<div class="o_bgbtn1 o_btn_df-sm js_popupbtn"><span>弹层切换</span></div>
+
+<pre>
+    &lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_popupbtn&quot; oData-popup=&quot;.js_tanceng1&quot;&gt;&lt;span&gt;点击出弹层1&lt;/span&gt;&lt;/div&gt;
+  
+    注意：弹层目标的id或class参数写在"oData-popup"属性内
+
+    &lt;!--START 弹层框 注意：弹层html要在o_body外部--&gt;
+   &lt;!--START 弹层框--&gt;
+    &lt;div class=&quot;o_popup js_tanceng1&quot;&gt;
+        &lt;span class=&quot;o_popupclose iconfont js_popupClose icon-remove&quot;&gt;&lt;/span&gt;
+        &lt;div style=&quot;text-align:center;font-size:60px;height:300px&quot;&gt;我就是你的弹层1&lt;/div&gt;
+        &lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_confirm&quot;&gt;&lt;span&gt;确定&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--END 弹层框--&gt;
+    
+</pre>
+<pre>
+    //弹层初始化（可管理本页面所有弹层，初始化一次就可以）
+    var myPopup=$(".o_body").oPopupFn();
+
+    //弹出弹层
+    myPopup.open({
+        target:".js_tanceng2"//要弹出的弹层
+    })
+
+    //例子（第一次点击弹出第一个弹层，第二次点击弹出第二个弹层）
+     $(".js_popupbtn").oToggle(function(){
+        myPopup.open({
+         target:".js_tanceng1"
+        })
+    },function(){
+        myPopup.open({
+         target:".js_tanceng2"
+        })
+    })
+</pre>
+<pre>
+    //open方法其他参数
+    closeFn:function(){}关闭弹层时要执行的方法(默认：null)。
+    //对象其他方法
+    myPopup.open();打开弹层
+    myPopup.close();关闭弹层
+</pre>
+<pre>
+//popup 弹层
+@popup_df_w:860px;//弹层宽度df为默认
+@popup_xl_w:860px;
+@popup_lg_w:600px;
+@popup_md_w:400px;
+@popup_sm_w:320px;
+@popup_xs_w:320px;
+@popup_sf_w:320px;//自定义节点
+@popupclose_w:30px;//关闭按钮大小
+@popupclose_bg:#eee;//关闭按钮背景
+@popupclose_text:\f00d;
+@popupshade_opacity:0.5;//遮罩透明度
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script src="obox_js/oPopup.js"></script>
+<!--START 弹层框-->
+<div class="o_popup js_tanceng1">
+    <span class="o_popupclose iconfont js_popupClose icon-remove"></span>
+    <div style="text-align:center;font-size:60px;height:300px">我就是你的弹层1</div>
+    <div class="o_bgbtn1 o_btn_df-sm js_confirm"><span>确定</span></div>
+</div>
+<!--END 弹层框-->
+<!--START 弹层框-->
+<div class="o_popup js_tanceng2">
+    <span class="o_popupclose iconfont js_popupClose icon-remove"></span>
+    <div style="text-align:center;font-size:60px;height:300px">我就是你的弹层2</div>
+    <div class="o_bgbtn1 o_btn_df-sm js_confirm queding"><span>确定确定有效果</span></div>
+</div>
+<!--END 弹层框-->
+<!--START 弹层框-->
+<div class="o_popup js_queding">
+    <span class="o_popupclose iconfont js_popupClose icon-remove"></span>
+    <div style="text-align:center;font-size:60px;height:300px" >hahah</div>
+
+</div>
+<!--END 弹层框-->
+<script>
+    var myPopup=$(".o_body").oPopupFn();
+    $(".js_popupbtn").oToggle(function(){
+        myPopup.open({
+         target:".js_tanceng1"
+        })
+    },function(){
+        myPopup.open({
+         target:".js_tanceng2"
+        })
+    })
+         
+    $(".queding").on("click",function(){
+        myPopup.open({
+         target:".js_queding"
+        })
+    });
+   
+    
+</script>
+</body>
+</html>

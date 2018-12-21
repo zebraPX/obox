@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oFullPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--#include file="public/head.shtml"-->
+    <style>
+    .codebox{position:absolute;top:0;}
+    .o_header{position: relative;z-index:999;}
+    .fullpage{text-align:right;color:black;font-size:40px}
+    </style>
+</head>
+<body>
+    <!--#include file="public/header.shtml"-->
+      <!--START 主要内容-->
+      <div class="fullpage js_fullpage">
+        <div class="oPage" style="background:green">
+            1
+        </div>
+        <div class="oPage"  style="background:yellow">
+           2
+        </div>
+        <div class="oPage"  style="background:orange">
+            3
+        </div>
+        <div class="oPage"  style="background:darkkhaki">
+            4
+        </div>
+      </div>
+       <!-- END 主要内容-->
+       <div class="codebox">
+           <pre>
+      &lt;div class=&quot;fullpage js_fullpage&quot;&gt;
+        &lt;div class=&quot;oPage&quot; style=&quot;background:green&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:yellow&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:orange&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:darkkhaki&quot;&gt;4&lt;/div&gt;
+      &lt;/div&gt;
+
+      var fullpage=$(".js_fullpage").oFullPage({
+        playFn=function(i){
+            console.log(i);// 参数i（ 当前滚动第几屏）
+            }
+        })
+        fullpage.init();
+
+        //其他方法
+        fullpage.goto(i) //手动滚动到第几屏
+
+           </pre>
+      
+       </div>
+    <!--#include file="public/footer.shtml"-->    <script>
+        var fullpage=$(".js_fullpage").oFullPage({
+            playFn:function(i){
+                console.log(i);
+                
+            }
+        })
+        fullpage.init();
+        
+
+        
+    </script>
+</body>
+</html>

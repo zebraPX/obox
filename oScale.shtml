@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oScale / 比例大小</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+    <style>
+        .box{width:100px;display:inline-block;margin-right:10px;background:#e543ae;color:white;font-size:20px}
+        @media (min-width:900px){
+            .box{width:200px;}
+        }
+    </style>
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>oScale / 比例大小</h1>
+    <div class="js_box box" >1:1</div><!--没填参数 默认1：1-->
+    <div class="js_box2 box" >2:1</div><!--js传参 2:1-->
+    <div class="js_box box" w="2" h="3" base="width">2:3</div>
+    <p>适用于固定比例的元素，长或宽必须有一项有明确有值</p>
+    <pre>
+     &lt;!--css--&gt;
+         .box{width:100px;}
+        @media (min-width:1200px){
+            .box{width:200px;}
+        }
+
+   
+    &lt;!--使用方法1 js传参--&gt;
+    &lt;div class=&quot;js_box box&quot; &gt;1:1&lt;/div&gt;&lt;!--没填参数 默认1：1--&gt;
+    &lt;!--js--&gt;
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+
+    &lt;div class=&quot;js_box2 box&quot; &gt;2:1&lt;/div&gt;&lt;!--js传参 2：1--&gt;
+    &lt;!--js--&gt;
+    var box2=$(".js_box2").oScale({
+        w:2,
+        h:1
+        })//js传参
+    box2.init();
+
+
+    &lt;!--使用方法2 html传参--&gt;
+    &lt;div class=&quot;js_box box&quot; w=&quot;2&quot; h=&quot;3&quot; base=&quot;width&quot;&gt;2:3&lt;/div&gt;
+    &lt;!--js--&gt;
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+
+    
+    </pre>
+
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script>
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+    var box2=$(".js_box2").oScale({
+        w:2,
+        h:1
+        })//js传参
+    box2.init();
+
+</script>
+</body>
+</html>

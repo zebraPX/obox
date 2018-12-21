@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oPictur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+<h1>响应式图片</h1>
+<img class="o_picture" src="" df="images/pc.jpg" xs="images/mobile.jpg" sm="images/mobile.jpg"
+     md="images/mobile.jpg" lg="images/mobile.jpg" xl="images/pc.jpg" alt="">
+<h2>设置不同分辨率下需要下载的图片 </h2>
+<pre>
+    &lt;img class=&quot;o_picture&quot; src=&quot;&quot; df=&quot;images/pc.jpg&quot; xs=&quot;images/mobile.jpg&quot; sm=&quot;images/mobile.jpg&quot;
+    md=&quot;images/pc.jpg&quot; lg=&quot;images/pc.jpg&quot; xl=&quot;images/pc.jpg&quot; alt=&quot;&quot;&gt;
+  </pre>
+<h2>设置不同节点对应的浏览器最大宽度 <span>"sm":宽度(单位px无需写),</span><span>"md":宽度(单位px无需写),</span><span>"lg":宽度(单位px无需写),</span>
+</h2>
+<pre>
+    //延迟加载图片
+    setTimeout(function(){
+        $(".o_picture").each(function(){
+            $(this).oPicture({
+                //自定义节点宽度
+                //sm:544,md:700,lg:992,xl:1200,
+            }).init();
+        });
+    },2000);
+  </pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script>
+    //延迟加载图片
+    setTimeout(function(){
+        $(".o_picture").each(function(){
+            $(this).oPicture({
+                //自定义节点宽度
+                //sm:544,md:700,lg:992,xl:1200,
+            }).init();
+        });
+    },2000);
+</script>
+</body>
+</html>

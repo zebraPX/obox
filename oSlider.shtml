@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oSlider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <!--#include file="public/head.shtml"-->
+    <style>
+        .banner{margin:0 auto;width:80%;}
+        .banner img{width:100%}
+        /* .banner .showbox li.cur{border:2px solid pink;}当前展示区域高亮css */
+        .banner .btn_prev,.banner .btn_next{height:20px;width:50px;background:red;}/*需要左右箭头自定义css*/
+        .banner .btn_prev{left:-55px;}
+        .banner .btn_next{right:-55px;}
+        .banner .btn_prev.o_lose,.banner .btn_next.o_lose{opacity:0.5;}
+        .banner ul li{position:relative;}
+        .banner ul li span{position:absolute;top:5px;left:5px;color:white;font-size:30px;}
+        .banner .pager {position:absolute;bottom:10px;width:100%;text-align:center;}/*需要分页自定义css*/
+        .banner .pager li{width:8px;height:8px;display:inline-block;margin:6px;background:white;vertical-align:top}
+        .banner .pager li.cur{background:yellow;width:12px;height:12px;margin:4px}
+        .js_banner2 .pager li.firstcur{background:red;border:2px solid white;top:-2px;}
+        .banner.js_banner3 .showbox{height:300px}
+        .banner.js_banner3 .showbox li{height:100px}
+        .banner.js_banner3 .showbox li img{height:100%}
+        .js_banner3 .pager li.firstcur{background:red;border:2px solid white;top:-2px;}
+        .banner.js_banner3 .btn_prev{left:0px;top:-20px}
+        .banner.js_banner3 .btn_next{right:auto;bottom:-20px;left:0}
+        @media (min-width:1200px){
+            .banner.js_banner3 .showbox{height:400px}
+            .banner.js_banner3 .showbox li{height:200px}
+        }
+    </style>
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+<!--START 主要内容-->
+    <h1>oSlider / 滑动轮播</h1>
+    <div class="banner js_banner">
+        <div class="showbox">
+            <ul class="o_g">
+                <li class="o_u o_df_2-2 o_sm_1-2">
+                    <img src="images/pc.jpg" alt=""><span>1</span>
+                </li>
+                <li class="o_u o_df_2-2 o_sm_1-2">
+                    <img src="images/pc2.jpg" alt=""><span>2</span>
+                </li>
+                <li class="o_u o_df_2-2 o_sm_1-2">
+                    <img src="images/pc.jpg" alt=""><span>3</span>
+                </li>
+                <li class="o_u o_df_2-2 o_sm_1-2">
+                    <img src="images/pc2.jpg" alt=""><span>4</span>
+                </li>
+            </ul>
+        </div>
+        <!--分页-->
+        <ul class="pager js_pager"></ul>
+    </div>
+<pre>
+     &lt;style&gt;
+        .banner{max-width:600px;margin:0 auto;}
+        .banner img{width:100%}
+        .banner .showbox li.cur{border:2px solid pink;}/*当前展示区域高亮css*/
+        .banner .btn_prev,.banner .btn_next{width:50px;background:red;}/*需要左右箭头自定义css*/
+        .banner .btn_prev{left:-50px;}
+        .banner .btn_next{right:-50px;}
+        .banner ul li{position:relative;}
+        .banner ul li span{position:absolute;top:5px;left:5px;color:white;font-size:30px;}
+        .banner .pager {position:absolute;bottom:10px;width:100%;text-align:center;}/*需要分页自定义css*/
+        .banner .pager li{width:8px;height:8px;display:inline-block;margin:6px;background:white;vertical-align:top}
+        .banner .pager li.cur{background:yellow;width:12px;height:12px;margin:4px}
+        .js_banner2 .pager li.firstcur{background:red;border:2px solid white;top:-2px;}
+        &lt;/style&gt;
+</pre>
+<pre>
+   &lt;div class=&quot;banner js_banner&quot;&gt;
+        &lt;div class=&quot;showbox&quot;&gt;
+            &lt;ul class=&quot;o_g&quot;&gt;
+                &lt;li class=&quot;o_u o_df_2-2&quot;&gt;&lt;img src=&quot;images/pc.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+                &lt;li class=&quot;o_u o_df_2-2&quot;&gt;&lt;img src=&quot;images/pc2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/li&gt;
+                &lt;li class=&quot;o_u o_df_2-2&quot;&gt;&lt;img src=&quot;images/pc.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/li&gt;
+                &lt;li class=&quot;o_u o_df_2-2&quot;&gt;&lt;img src=&quot;images/pc2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;4&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!--分页--&gt;
+        &lt;ul class=&quot;pager js_pager&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+</pre>
+<pre>
+      var bannerSlider=$(".js_banner").oSlider({
+            loop:true,
+            speed:1000,
+            pager:".js_pager"
+        });
+        bannerSlider.init();//开始轮播
+</pre>
+<h1>行多列控制</h1>
+<div class="banner js_banner2">
+    <div class="showbox">
+        <ul class="o_g">
+            <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile.jpg" alt=""><span>1</span></li>
+            <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile2.jpg" alt=""><span>2</span></li>
+            <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile.jpg" alt=""><span>3</span></li>
+           <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile2.jpg" alt=""><span>4</span></li>
+            <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile.jpg" alt=""><span>5</span></li> 
+           <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile2.jpg" alt=""><span>6</span></li>
+           <li class="o_u o_df_1-4 o_lg_1-2 o_xs_2-2"><img src="images/mobile2.jpg" alt=""><span>6</span></li>
+          
+        </ul>
+    </div>
+    <!--分页-->
+    <ul class="pager js_pager"></ul>
+</div>
+<pre>
+   &lt;div class=&quot;banner js_banner2&quot;&gt;
+    &lt;div class=&quot;showbox&quot;&gt;
+        &lt;ul class=&quot;o_g&quot;&gt;
+            &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/li&gt;
+           &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;4&lt;/span&gt;&lt;/li&gt;
+            &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;5&lt;/span&gt;&lt;/li&gt; 
+           &lt;li class=&quot;o_u o_df_1-4 o_lg_1-2 o_xs_2-2&quot;&gt;&lt;img src=&quot;images/mobile2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;6&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!--分页--&gt;
+    &lt;ul class=&quot;pager js_pager&quot;&gt;&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+      var bannerSlider2=$(".js_banner2").oSlider({
+            loop:true,
+            pager:".js_pager"
+        });
+        bannerSlider2.init();
+</pre>
+<h1>纵向轮播(内元素个数无法用栅格控制，只能自定义固定高度了)</h1>   
+ <div class="banner js_banner3">
+        <div class="showbox">
+            <ul class="o_g">
+                <li class="o_u o_df_2-2">
+                    <img src="images/pc.jpg" alt=""><span>1</span>
+                </li>
+                <li class="o_u o_df_2-2">
+                    <img src="images/pc2.jpg" alt=""><span>2</span>
+                </li>
+                <li class="o_u o_df_2-2">
+                    <img src="images/pc.jpg" alt=""><span>3</span>
+                </li>
+                <li class="o_u o_df_2-2">
+                    <img src="images/pc2.jpg" alt=""><span>4</span>
+                </li>
+                <li class="o_u o_df_2-2">
+                    <img src="images/pc.jpg" alt=""><span>5</span>
+                </li>
+                
+                
+            </ul>
+        </div>
+        <!--分页-->
+        <ul class="pager js_pager"></ul>
+    </div>
+    <pre>
+         &lt;style&gt;
+            .banner.js_banner3 .showbox{height:300px}
+            .banner.js_banner3 .showbox li{height:100px}
+            .banner.js_banner3 .showbox li img{height:100%}
+            .js_banner3 .pager li.firstcur{background:red;border:2px solid white;top:-2px;}
+            .banner.js_banner3 .btn_prev{left:0px;top:-20px}
+            .banner.js_banner3 .btn_next{right:auto;bottom:-20px;left:0}
+            @media (min-width:1200px){
+            .banner.js_banner3 .showbox{height:400px}
+            .banner.js_banner3 .showbox li{height:200px}
+            }
+         &lt;/style&gt;
+        &lt;div class=&quot;banner js_banner3&quot;&gt;
+        &lt;div class=&quot;showbox&quot;&gt;
+            &lt;ul class=&quot;o_g&quot;&gt;
+                &lt;li class=&quot;o_u&quot;&gt;
+                    &lt;img src=&quot;images/pc.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;1&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;o_u&quot;&gt;
+                    &lt;img src=&quot;images/pc2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;2&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;o_u&quot;&gt;
+                    &lt;img src=&quot;images/pc.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;3&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;o_u&quot;&gt;
+                    &lt;img src=&quot;images/pc2.jpg&quot; alt=&quot;&quot;&gt;&lt;span&gt;4&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!--分页--&gt;
+        &lt;ul class=&quot;pager js_pager&quot;&gt;&lt;/ul&gt;
+    </pre>
+    <pre>
+        var bannerSlider3=$(".js_banner3").oSlider({
+            loop:true,
+            pager:".js_pager",
+            directionVertical : true //定义纵向
+        })
+        bannerSlider3.init();
+    </pre>
+<pre>
+    注：不支持jquery元素集集调用(定制化复杂)
+    其他参数
+    autoWidth: false / true //轮播区域是否自适应宽度（默认false）
+    loop: false / true //是否无视差循环
+    pager:".js_pager" //分页容器class或id
+    speed:1000  //自动轮播间隙时间(毫秒)
+    moveSpeed:500 //轮播切换的移动速度
+    pagerShow: false / true //分页是否显示索引内容
+    pagerHover:true/false //分页是否hover切换
+    prevFn:function(i){} //移动到上一个的回调函数 参数i:当前轮播索引
+    nextFn:function(i){} //移动到下一个的回调函数 参数i:当前轮播索引
+    playFn:function(p){} //切换时的回调函数不分上下（在prevFn/nextFn后执行） 参数json：p.i=播放的页数索引0开始 / p.next=按钮next / p.prev=按钮prev
+    windowResize：true/false //是否支持浏览器改变大小后重置轮播（默认true）
+    moveOne:ture/false //滑动一次只切换个轮播 (默认false)
+    moveTouch:true/false //根据滑动幅度切换轮播个数 (默认ture)
+    directionVertical : true/false  //定义纵向 (默认false)
+
+    其他属性例如“bannerSlider”
+    bannerSlider.prevBtn //轮播按钮（上一个）
+    bannerSlider.nextBtn //轮播按钮（下一个）
+    bannerSlider.clickI //当前点击的轮播块索引
+    startFn:function(){} //初始化完毕回调
+   
+</pre>
+<!-- END 主要内容-->
+<!--#include file="public/footer.shtml"-->
+<script>
+    $(function(){
+        var bannerSlider=$(".js_banner").oSlider({
+            loop:true,
+           // speed:1000,
+            pager:".js_pager",
+            pagerHover:true,
+            startFn:function(){
+                console.log("开始");
+            },
+            playFn:function(){
+                console.log("play")
+            }
+
+        });
+       bannerSlider.init();
+
+        var bannerSlider2=$(".js_banner2").oSlider({
+            loop:true,
+            pager:".js_pager",
+            loop:true
+        });
+        bannerSlider2.init();
+
+        var bannerSlider3=$(".js_banner3").oSlider({
+            loop:true,
+            pager:".js_pager",
+            // speed:1000,
+           
+            directionVertical:true//定义纵向
+        })
+        bannerSlider3.init();
+    })
+</script>
+</body>
+</html>

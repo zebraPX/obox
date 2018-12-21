@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+<meta name="format-detection"content="telephone=no, email=no"/>
+<!--#include file="public/head.shtml"-->
+</head>
+<body>
+<!--#include file="public/header.shtml"-->
+		<iframe src="autoH.shtml" frameborder="0" class="o_H100" style="margin:10px 2%;width:96%;height:600px!important" ></iframe>
+		<h2>用法:固定高度块 class="<span>o_fixH</span>" 自适应高度块 class="<span>o_autoH</span>" 子元素全高 class="<span>o_H100</span>"</h2>
+		<pre>
+&lt;div class="o_body" style="background:#6fef84"&gt;
+        &lt;div class="o_main"&gt;
+        &lt;!--START 布局--&gt;
+                &lt;div id="header" class="o_fixH "&gt;head固定高度 80px md下隐藏&lt;/div&gt;
+                &lt;div class="o_autoH  " &gt;
+                   内容
+                &lt;/div&gt;
+                &lt;div id="footer"  class="o_fixH "&gt;footer 固定高度 100px  SM高200px&lt;/div&gt;
+
+        &lt;!-- END 布局 --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+		</pre>
+
+	<!--#include file="public/footer.shtml"-->
+</body>
+</html>
