@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oConfirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <style>
+        .list {line-height:44px}
+        .list .o_bgbtn1{vertical-align:middle}
+        .list p{width:200px;display:inline-block;}
+        .o_popup.red{border:2px solid red}
+    </style>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>confirm确认信息弹层</h1>
+
+<ul class="list">
+ <li><p>111111111111</p><div class="o_bgbtn1 o_btn_df-sm js_del"><span>删除</span></div></li>
+ <li><p>222222222222</p><div class="o_bgbtn1 o_btn_df-sm js_del"><span>删除</span></div></li>
+ <li><p>333333333333</p><div class="o_bgbtn1 o_btn_df-sm js_del"><span>删除</span></div></li>
+ <li><p>444444444444</p><div class="o_bgbtn1 o_btn_df-sm js_del"><span>删除</span></div></li>
+</ul>
+<div class="o_bgbtn1 o_btn_df-sm js_delall"><span>删除全部信息</span></div>
+
+<pre>
+    &lt;ul class=&quot;list&quot;&gt;
+        &lt;li&gt;&lt;p&gt;111111111111&lt;/p&gt;&lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_del&quot;&gt;&lt;span&gt;删除&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;p&gt;222222222222&lt;/p&gt;&lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_del&quot;&gt;&lt;span&gt;删除&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;p&gt;333333333333&lt;/p&gt;&lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_del&quot;&gt;&lt;span&gt;删除&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;p&gt;444444444444&lt;/p&gt;&lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_del&quot;&gt;&lt;span&gt;删除&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_delall&quot;&gt;&lt;span&gt;删除全部信息&lt;/span&gt;&lt;/div&gt;
+</pre>
+<pre>
+    //confirm初始化(初始化一次就可以)
+    var myConfirm=$(".o_body").oConfirm();
+
+    //调用弹出删除一条信息
+    $(".js_del").on("click",function(){
+
+       $(".js_del").on("click",function(){
+            myConfirm.open({
+                info : "你确定要删除这条信息么？", //提示信息
+                ele : $(this), //传递对象
+                callbackFn : function(ele){ //确认后执行方法
+                    ele.parent().remove();
+                    },
+                addClass:"red" //给弹层添加其他class
+                }); 
+    }); 
+        
+    });
+
+    //调用弹出删除全部信息
+    $(".js_delall").on("click",function(){
+        myConfirm.open({
+            info : "你确定要删除全部信息么？",
+            ele : $(".list"),
+            callbackFn : function(ele){
+                ele.find("li").remove();
+                }
+            }); 
+    });
+</pre>
+
+<pre>
+//obox_set.less 设置 confirm弹层样式
+@confirm_df_w:500px;//confirm 确认弹层
+@confirm_xl_w:500px;
+@confirm_lg_w:500px;
+@confirm_md_w:500px;
+@confirm_sm_w:300px;
+@confirm_xs_w:300px;
+@confirm_sf_w:300px;//自定义节点
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script><script>
+    var myConfirm=$(".o_body").oConfirm();
+
+    $(".js_del").on("click",function(){
+       myConfirm.open({
+        info : "你确定要删除这条信息么？", //提示信息
+        ele : $(this), //传递对象
+        callbackFn : function(ele){ //确认后执行方法
+           ele.parent().remove();
+            },
+        addClass:"red" //给弹层添加其他class
+        }); 
+    });
+
+    $(".js_delall").on("click",function(){
+       myConfirm.open({
+        info : "你确定要删除全部信息么？",
+        ele : $(".list"),
+        callbackFn : function(ele){
+           ele.find("li").remove();
+            }
+        }); 
+    });
+
+</script>
+</body>
+</html>

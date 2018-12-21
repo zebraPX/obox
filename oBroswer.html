@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oBroswer-浏览器判断</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+
+<body>
+    <div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+    <!--START 主要内容-->
+    <h1>js判断浏览器版本</h1>
+    <!--<p>opera<span class="opera"></span></p>-->
+
+    <p>isIe8
+        <span class="ie8"></span>
+    </p>
+    <p>isIe9
+        <span class="ie9"></span>
+    </p>
+    <p>isPC
+        <span class="pc"></span>
+    </p>
+    <p>isUC
+        <span class="uc"></span>
+    </p>
+    <p>isFirefox
+        <span class="fox"></span>
+    </p>
+    <p>isTouch (触摸屏)
+        <span class="touch"></span>
+    </p>
+    <p>isEn （浏览器语言英文）
+        <span class="isEn"></span>
+    </p>
+    <p>isCn （浏览器语言中文）
+        <span class="isCn"></span>
+    </p>
+
+    <h1>获取url参数</h1>
+    <pre>
+        var username=getUrlParm("username")
+            console.log(username)
+            //hahah
+    </pre>
+    
+    <h1>获取字符串url信息</h1>
+
+    <pre>
+        
+            var url="http://www.casarte.com/product/laundry/product_compare.shtml?productId=389690_362687&channelid=63257"
+            
+            console.log("字符串Url:"+url);
+
+            var hostname=url.cutUrl("hostname");//与 window.location 一致
+            console.log("字符串urlhostname："+hostname);
+
+            var urlSearch=url.cutUrl("search");
+            console.log("字符串url参数集合："+urlSearch);
+
+             var prdId= urlSearch.getParm("productId")
+            console.log("字符串url参数'productId'值："+prdId);
+
+            var urlhash=url.cutUrl("hash")
+            console.log("字符串url参数'hash'值："+urlhash);
+    </pre>
+
+    <!-- END 主要内容-->
+    </div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+    <script>
+        $(function () {
+            //   isOpera?$(".opera").html("true").addClass("true"):$(".opera").html("false").addClass("false");
+            //   isSafari?$(".Safari").html("true").addClass("true"):$(".Safari").html("false").addClass("false");
+            isIe11 ? $(".ie11").html("true").addClass("true") : $(".ie11").html("false").addClass("false");
+            isIe8 ? $(".ie8").html("true").addClass("true") : $(".ie8").html("false").addClass("false");
+            isIe9 ? $(".ie9").html("true").addClass("true") : $(".ie9").html("false").addClass("false");
+            isPC ? $(".pc").html("true").addClass("true") : $(".pc").html("false").addClass("false");
+            isUC ? $(".uc").html("true").addClass("true") : $(".uc").html("false").addClass("false");
+            isFirefox ? $(".fox").html("true").addClass("true") : $(".fox").html("false").addClass("false");
+            isTouch ? $(".touch").html("true").addClass("true") : $(".touch").html("false").addClass("false");
+            isEn ? $(".isEn").html("true").addClass("true") : $(".isEn").html("false").addClass("false");
+            isCn ? $(".isCn").html("true").addClass("true") : $(".isCn").html("false").addClass("false");
+            
+            var username=getUrlParm("username")
+            console.log("本地链接参数username："+username)
+            //hahah
+
+            var url="http://www.casarte.com/product/laundry/product_compare.shtml?productId=389690_362687&channelid=63257"
+            
+            console.log("字符串url:"+url);
+
+            var hostname=url.cutUrl("hostname");//与 window.location 一致
+            console.log("字符串url'hostname'："+hostname);
+
+            var urlSearch=url.cutUrl("search");
+            console.log("字符串url参数集合："+urlSearch);
+
+           var prdId= urlSearch.getParm("productId")
+            console.log("字符串url参数'productId'值："+prdId);
+
+            var urlhash=url.cutUrl("hash")
+            console.log("字符串url参数'hash'值："+urlhash);
+
+
+        })
+    </script>
+</body>
+
+</html>

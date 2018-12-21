@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oToggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>oToggle / 切换门</h1>
+<div class="row">
+    <span class="o_bgbtn1 o_btn_df-sm js_doorold"><span>旧切换门</span></span>
+</div>
+<div class="row">
+        <span class="o_bgbtn2 o_btn_df-sm js_door"><span>新切换门</span></span>
+       <span class="o_bgbtn2 o_btn_df-sm js_close"><span>关闭</span></span>
+</div>
+<pre>
+    &lt;div class=&quot;row&quot;&gt;
+    &lt;span class=&quot;o_bgbtn1 o_btn_df-sm js_doorold&quot;&gt;&lt;span&gt;旧切换门&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+        &lt;span class=&quot;o_bgbtn2 o_btn_df-sm js_door&quot;&gt;&lt;span&gt;新切换门&lt;/span&gt;&lt;/span&gt;
+       &lt;span class=&quot;o_bgbtn2 o_btn_df-sm js_close&quot;&gt;&lt;span&gt;关闭&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+<p class="js_text"></p>
+<pre>
+     $(".js_door").oToggle(function(s){
+        $(".js_text").html($(".js_text").html()+" open ");
+    },function(s){
+        $(".js_text").html($(".js_text").html()+" close ");
+    });
+
+    $(".js_close").on("click",function(){
+        $(".js_door").attr("auto","0");
+    })
+
+    $(".js_doorold").toggle(function(){
+        $(".js_text").html($(".js_text").html()+" open ");
+    },function(){
+        $(".js_text").html($(".js_text").html()+" close ");
+    });
+</pre>
+<pre>
+    其他元素改变切换门处理
+    auto=0 初始化切换门
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+<script>
+    $(".js_door").oToggle(function(s){
+        $(".js_text").html($(".js_text").html()+"<span style='color:red'> open </span>");
+        s.addClass("ss")
+    },function(s){
+        $(".js_text").html($(".js_text").html()+"<span style='color:green'> close </span>");
+    });
+
+    $(".js_close").on("click",function(){
+        $(".js_door").attr("auto","0");
+    })
+
+    $(".js_doorold").toggle(function(){
+        $(".js_text").html($(".js_text").html()+"<span style='color:red'> open </span>");
+    },function(){
+        $(".js_text").html($(".js_text").html()+"<span style='color:green'> close </span>");
+    });
+</script>
+</body>
+</html>

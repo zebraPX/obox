@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oPopup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>弹层</h1>
+<div class="o_bgbtn1 o_btn_df-sm js_popupbtn" oData-popup=".js_tanceng1"><span>点击出弹层1</span></div>
+<!--<div class="o_bgbtn1 o_btn_df-sm js_popupbtn" oData-popup=".js_tanceng2"><span>点击出弹层2</span></div>-->
+
+<pre>
+    &lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_popupbtn&quot; oData-popup=&quot;.js_tanceng1&quot;&gt;&lt;span&gt;点击出弹层1&lt;/span&gt;&lt;/div&gt;
+  
+    注意：弹层目标的id或class参数写在"oData-popup"属性内
+
+    &lt;!--START 弹层框 注意：弹层html要在o_body外部--&gt;
+   &lt;!--START 弹层框--&gt;
+    &lt;div class=&quot;o_popup js_tanceng1&quot;&gt;
+        &lt;span class=&quot;o_popupclose iconfont js_popupClose icon-remove&quot;&gt;&lt;/span&gt;
+        &lt;div style=&quot;text-align:center;font-size:60px;height:300px&quot;&gt;我就是你的弹层1&lt;/div&gt;
+        &lt;div class=&quot;o_bgbtn1 o_btn_df-sm js_confirm&quot;&gt;&lt;span&gt;确定&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--END 弹层框--&gt;
+    
+</pre>
+<pre>
+    //弹层初始化
+    var myPopup=$(".js_popupbtn").oPopup({
+      confirmFn:function(p){
+        alert(p.selfEle.html());
+      }
+    });
+    //弹层内部内部要初始化高度试用下面方法
+    //mypopup.init();
+</pre>
+<pre>
+    //其他参数
+    confirm:弹层内的确认按钮标识(默认".js_confirm")。
+    confirmFn:function(p){}确认后要执行的方法内置josn参数p下面是参数介绍
+         p.selfEle=触发弹层的按钮,
+         p.targetEle=弹层本身。
+    closeFn:function(){}关闭弹层时要执行的方法(默认：null)。
+    openFn:function(){}打开弹层时执行的方法(默认：null)。
+    //其他方法
+    myPopup.open();打开弹层
+    myPopup.close();关闭弹层
+	shadeClose:false 点击遮照是否可以关闭弹层 false/true（默认：false）
+</pre>
+<pre>
+//popup 弹层
+@popup_df_w:860px;//弹层宽度df为默认
+@popup_xl_w:860px;
+@popup_lg_w:600px;
+@popup_md_w:400px;
+@popup_sm_w:320px;
+@popup_xs_w:320px;
+@popup_sf_w:320px;//自定义节点
+@popupclose_w:30px;//关闭按钮大小
+@popupclose_bg:#eee;//关闭按钮背景
+@popupclose_text:\f00d;
+@popupshade_opacity:0.5;//遮罩透明度
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+
+<!--START 弹层框-->
+<div class="o_popup js_tanceng1">
+    <span class="o_popupclose iconfont js_popupClose icon-remove"></span>
+    <div style="text-align:center;font-size:60px;height:300px">我就是你的弹层1</div>
+    <div class="o_bgbtn1 o_btn_df-sm js_confirm"><span>确定</span></div>
+    <div class="o_bgbtn1 o_btn_df-sm js_openAlert"><span>跳alert</span></div>
+</div>
+<!--END 弹层框-->
+<!--START 弹层框-->
+<div class="o_popup js_tanceng2">
+    <span class="o_popupclose iconfont js_popupClose icon-remove"></span>
+    <div style="text-align:center;font-size:60px;height:300px">我就是你的弹层2</div>
+    <div class="o_bgbtn1 o_btn_df-sm js_confirm"><span>确定</span></div>
+</div>
+<!--END 弹层框-->
+<script>
+    var myPopup=$(".js_popupbtn").oPopup({
+        shadeClose:true,
+      confirmFn:function(p){
+        alert(p.selfEle.html());
+      }
+    });
+    var myAlert=$(".o_body").oAlert();
+     $(".js_openAlert").on("click",function(){
+         console.log(11)
+        myAlert.open({
+            info:"hahah"
+        })
+     });
+
+</script>
+</body>
+</html>

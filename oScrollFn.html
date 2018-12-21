@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oScrollFn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>oScrollFn / 滚轮事件</h1>
+<div class="js_obj" style="background:#e543ae;height:200px;line-height:200px;font-size:32px;text-align: center;color:white">滚动区域</div>
+<p class="js_text"></p>
+<pre>
+    &lt;div class=&quot;js_obj&quot; &gt;滚动区域&lt;/div&gt;
+</pre>
+<pre>
+  $(".js_obj").oScrollFn({
+        upFn:function(){
+           $(".js_text").html($(".js_text").html()+"<span style='color:red'> 上滚 </span>")
+        },
+        downFn:function(){
+            $(".js_text").html($(".js_text").html()+"<span style='color:green'> 下滚 </span>")
+        }
+    });
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+<script>
+    $(".js_obj").oScrollFn({
+        upFn:function(){
+           $(".js_text").html($(".js_text").html()+"<span style='color:red'> 上滚 </span>")
+        },
+        downFn:function(){
+            $(".js_text").html($(".js_text").html()+"<span style='color:green'> 下滚 </span>")
+        }
+    });
+</script>
+</body>
+</html>

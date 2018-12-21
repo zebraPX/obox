@@ -1,8 +1,0 @@
-<link rel="stylesheet" href="images/obox.css">
-<link rel="stylesheet" href="images/prettify.css">
-<link rel="stylesheet" href="images/base.css">
-<style>
-    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
-    h1:after{content:"";display:block;clear :both;width:1px;}
-    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
-</style>

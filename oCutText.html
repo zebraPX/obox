@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oCutText</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <style>
+        .o_popup.red {
+            border: 2px solid red
+        }
+
+        .tit {
+            width: 260px;
+            border: 1px solid red;
+            display: block;
+            font-size: 25px;
+            line-height: 1.37em
+        }
+    </style>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+
+<body>
+    <div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+    <!--START 主要内容-->
+    <h1>oCutText文本裁剪</h1>
+    <h3 title="舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调" class="js_tit tit" df="38">舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调</h3>
+    <h3 title="舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调" df="38" class="js_tit tit">舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调</h3>
+
+    <p>下面是响应式设置: 不同节点下截取字段不同</p>
+    <h3 title="舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调" df="50" xs="20" sm="25" md="30"  lg="40"  class="js_tit tit">舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调</h3>
+    <pre>
+    &lt;!-- 参数介绍:
+        title : 文本所有内容
+        df : 默认截取英文字符数(代表默认,响应式布局也代表xl的截取字符数) --&gt;
+    &lt;h3 title=&quot;舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调&quot; class=&quot;js_tit tit&quot; df=&quot;38&quot;&gt;舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调&lt;/h3&gt;
+    &lt;h3 title=&quot;舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调&quot; df=&quot;38&quot; class=&quot;js_tit tit&quot;&gt;舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调&lt;/h3&gt;
+
+    &lt;!--下面是响应式设置: 不同节点下截取字段不同  分别xs/sm/md/lg 下截取字符个数--&gt;
+    
+    &lt;h3 title=&quot;舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调&quot; df=&quot;50&quot; xs=&quot;20&quot; sm=&quot;25&quot; md=&quot;30&quot;  lg=&quot;40&quot; class=&quot;js_tit tit&quot;&gt;
+        舒适王1.5匹除PM2.5宽带无氟变频壁挂式空调变频壁挂式空调变频壁挂式空调
+    &lt;/h3&gt;
+</pre>
+
+    <pre>
+    //js 调用
+    $(".js_tit").oCurText()
+</pre>
+
+    <pre>
+//js重置断点尺寸
+  js断点尺寸统一使用js公用断点 --- oPoint={sm:543,md:699,lg:991,xl:1199};
+  oCurText需要使用其他断点尺寸时设置
+  $(".js_tit").oCurText({
+      smPoint:XXX,
+      mdPoint:XXX,
+      lgPoint:XXX,
+      xlPoint:XXX
+  })
+</pre>
+    <!-- END 主要内容-->
+    </div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>    <script>
+        $(".js_tit").oCurText()
+    </script>
+</body>
+
+</html>

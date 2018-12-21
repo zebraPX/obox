@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+
+</head>
+
+<body>
+    <div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+    <!--START 主要内容-->   
+    <h1>input & textarea重置</h1>
+    <dl>
+        <span class="ui_input o_animate">
+            <input type="text" class="o_input" autotext="默认信息">
+        </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;默认信息&quot;&gt;
+            &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate err ">
+            <input type="text" class="o_input" autotext="默认信息">
+        </span>
+        <p class="ui_err show"><i></i>报错信息报错信息报错信息 <a href="">链接文字</a></p>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate err &quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;默认信息&quot;&gt;
+            &lt;/span&gt;
+            &lt;p class=&quot;ui_err show&quot;&gt;&lt;i&gt;&lt;/i&gt;报错信息报错信息报错信息 &lt;a href=&quot;&quot;&gt;链接文字&lt;/a&gt;&lt;/p&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate">
+                <i class="icon  icon-envelope-alt"></i> 
+                <input type="text" class="o_input" autotext="默认信息">
+            </span>
+        <span class="ui_input o_animate">
+            <input type="text" class="o_input" autotext="默认信息">
+            <i class="icon icon-envelope-alt"></i> 
+        </span>
+    </dl>
+
+    <pre>
+            &lt;!-- 左图标 --&gt;
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;i class=&quot;icon  icon-envelope-alt&quot;&gt;&lt;/i&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;默认信息&quot;&gt;
+            &lt;/span&gt;
+    
+            &lt;!-- 右图标 --&gt;
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;默认信息&quot;&gt;
+                    &lt;i class=&quot;icon icon-envelope-alt&quot;&gt;&lt;/i&gt; 
+                &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate">
+                <input type="text" class="o_input" autotext="默认信息">
+                <a href="" class="r5 btn o_bgbtn1 o_btn_df-sm" style="width:90px">
+                    <span>按钮</span>
+                </a>
+            </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;默认信息&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;r5 btn o_bgbtn1 o_btn_df-sm&quot; style=&quot;width:90px&quot;&gt;
+                    &lt;span&gt;按钮&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate">
+                <input type="text" class="o_input" autotext="信息">
+                <span class="time">倒计时<em class="ui_c_orange" o-to="0" o-from="20" o-time="20000">11</em>秒</span>
+            </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;信息&quot;&gt;
+                &lt;span class=&quot;time&quot;&gt;倒计时&lt;em class=&quot;ui_c_orange&quot; o-to=&quot;0&quot; o-from=&quot;20&quot; o-time=&quot;20000&quot;&gt;11&lt;/em&gt;秒&lt;/span&gt;
+            &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate">
+            <textarea name="" id="" cols="20" rows="3" class="o_textarea" autotext="详细的街道、楼号、楼层、门牌号等">详细的街道、楼号、楼层、门牌号等</textarea>
+        </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;20&quot; rows=&quot;3&quot; class=&quot;o_textarea&quot; autotext=&quot;详细的街道、楼号、楼层、门牌号等&quot;&gt;详细的街道、楼号、楼层、门牌号等&lt;/textarea&gt;
+            &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_input o_animate">
+            <input type="text" class="o_input" autotext="图形验证码">
+            <a href="" class="link">换一换</a>
+            <img src="images/notice_head.jpg" class="code" alt="">
+        </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_input o_animate&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;o_input&quot; autotext=&quot;图形验证码&quot;&gt;
+                &lt;a href=&quot;&quot; class=&quot;link&quot;&gt;换一换&lt;/a&gt;
+                &lt;img src=&quot;images/notice_head.jpg&quot; class=&quot;code&quot; alt=&quot;&quot;&gt;
+            &lt;/span&gt;
+    </pre>
+
+    <dl>
+        <span class="ui_checkbox o_checkbox cur " name="fx">
+            checkbox
+        </span>
+        <span class="ui_checkbox o_checkbox" name="fx">
+            checkbox
+        </span>
+        <span class="ui_checkbox o_checkbox lose" name="fx">
+            checkbox失效
+        </span>
+    </dl>
+
+   <pre>
+        &lt;span class=&quot;ui_checkbox o_checkbox cur &quot; name=&quot;fx&quot;&gt;
+            checkbox
+        &lt;/span&gt;
+        &lt;span class=&quot;ui_checkbox o_checkbox&quot; name=&quot;fx&quot;&gt;
+            checkbox
+        &lt;/span&gt;
+        &lt;span class=&quot;ui_checkbox o_checkbox lose&quot; name=&quot;fx&quot;&gt;
+            check
+   </pre>
+
+    <dl>
+            <span class="ui_radio o_radio cur " name="fx">
+                radio
+            </span>
+            <span class="ui_radio o_radio " name="fx">
+                radio
+            </span>
+            <span class="ui_radio o_radio lose" name="fx">
+                radio失效
+            </span>
+    </dl>
+
+    <pre>
+            &lt;span class=&quot;ui_radio o_radio cur &quot; name=&quot;fx&quot;&gt;
+                radio
+            &lt;/span&gt;
+            &lt;span class=&quot;ui_radio o_radio &quot; name=&quot;fx&quot;&gt;
+                radio
+            &lt;/span&gt;
+            &lt;span class=&quot;ui_radio o_radio lose&quot; name=&quot;fx&quot;&gt;
+                radio失效
+            &lt;/span&gt;
+    </pre>
+    
+
+    <!-- END 主要内容-->
+    </div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+
+    
+</body>
+
+</html>

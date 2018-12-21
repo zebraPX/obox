@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oMenu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<pre>   &lt;div class="o_header"&gt;
+        &lt;i class="o_menu_link js_menu_link1 "&gt;&lt;/i&gt; &lt;!-- menu打开按钮 --&gt;
+        &lt;div class="o_menu js_menu1"&gt;
+           menu 内容
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+</pre>
+<pre>     //js初始化menu
+  var menu1 = $(".js_menu_link1").oMenu({
+        menu: ".js_menu1",
+        linkage: true, //是否连动
+        openfn: function() {
+            //打开menu其他事件
+            console.log("打开了")
+        },
+        closefn:function(){
+            //关闭menu其他事件
+            console.log("关闭")
+        }
+    });
+</pre>
+<pre> //obox_set.less初始化ui menu
+@menu_link_size:50px ;//menulinkbtn大小
+@menu_link_bgcolor:#3B9B4B; //menulinkbtn 背景颜色
+@menu_link_bgcolor_cur:#3B9B4B;//menulinkbtn 背景高亮颜色
+@menu_link_color:white;//menulinkbtn 图标颜色
+@menuzz_top:0px;//menu遮罩上间距
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oLoading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <style>
+        .showbox{width:300px;height:200px;background:#ededed;padding:10px;display:inline-block;margin-bottom:10px}
+    </style>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+
+<body>
+    <div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+    <!--START 主要内容-->
+    <h1>oLoading/加载效果</h1>
+    <div class="showbox">加载区域</div><br>
+    <a href="javascript:;" class="o_bgbtn1 o_btn_df-df js_loading"><span>开始加载</span></a>
+    <a href="javascript:;" class="o_bgbtnbase o_btn_df-df js_loaded"><span>加载完毕</span></a>
+    
+    <pre>
+        &lt;div class=&quot;showbox&quot;&gt;加载区域&lt;/div&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;o_bgbtn1 o_btn_df-df js_loading&quot;&gt;&lt;span&gt;开始加载&lt;/span&gt;&lt;/a&gt;
+        &lt;a href=&quot;javascript:;&quot; class=&quot;o_bgbtnbase o_btn_df-df js_loaded&quot;&gt;&lt;span&gt;加载完毕&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    </pre>
+    <pre>
+        $(function(){
+            //初始化loading对象
+            var loading=$(".showbox").oLoading();
+    
+            $(".js_loading").on("click",function(){
+                //开始加载
+                loading.start();
+            });
+    
+            $(".js_loaded").on("click",function(){
+                //加载完成
+                loading.end();
+            });
+    
+        });
+    </pre>
+    <p>样式修改 obox_set.less</p>
+    <pre>
+        @loadingSize:80px;//loading大小
+        @loadingPoingSize:10px;//点大小
+        @loadingColor:green;//loading颜色
+        @loadingTextColor:#999;//loading文字颜色
+        @loadingShadeBG:rgba(255,255,255o,0.5);//loading遮照颜色
+    </pre>
+
+    <!-- END 主要内容-->
+    </div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>    <script>
+    $(function(){
+        //初始化loading对象
+        var loading=$(".showbox").oLoading();
+
+        $(".js_loading").on("click",function(){
+            //开始加载
+            loading.start();
+        });
+
+        $(".js_loaded").on("click",function(){
+            //加载完成
+            loading.end();
+        });
+
+    });
+    </script>
+</body>
+
+</html>

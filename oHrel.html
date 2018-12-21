@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oHrel-高度跟随</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+    <style>
+        .o_clearbox{margin:5px 0px;}
+        .objbox{width:200px;height:300px;background:#e543ae;color:white;font-size:30px;float:left}
+        .objbox2{width:200px;height:80px;background:#e543ae;color:white;font-size:30px;float:left}
+        @media (max-width:1200px){
+            .objbox{height:250px;}
+            .objbox2{height:300px;}
+        }
+    </style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>oHrel / 高度跟随</h1>
+<div class="o_clearbox">
+    <div  class="objbox o_table">
+        <div class="o_cell">
+            固定大小box
+        </div>
+    </div>
+    <div style="background:#3ca14d;width:300px;color:white;font-size:30px;float:left" class="js_oHerl o_table">
+        <div class="o_cell">
+            跟随高度box
+        </div>
+    </div>
+</div>
+<div class="o_clearbox">
+    <div  class="objbox2 o_table">
+        <div class="o_cell">
+            固定大小box
+        </div>
+    </div>
+    <div style="background:#3ca14d;width:300px;color:white;font-size:30px;float:left" class="js_oHerl o_table">
+        <div class="o_cell">
+            跟随高度box
+        </div>
+    </div>
+</div>
+
+<pre>
+    &lt;!--css--&gt;
+    &lt;style&gt;
+       .o_clearbox{margin:5px 0px;}
+        .objbox{width:200px;height:300px;background:#e543ae;color:white;font-size:30px;float:left}
+        .objbox2{width:200px;height:80px;background:#e543ae;color:white;font-size:30px;float:left}
+        @media (max-width:1200px){
+            .objbox{height:250px;}
+            .objbox2{height:300px;}
+        }
+    &lt;/style&gt;
+
+    &lt;!--html--&gt;
+    &lt;div class=&quot;o_clearbox&quot;&gt;
+    &lt;div  class=&quot;objbox o_table&quot;&gt;
+        &lt;div class=&quot;o_cell&quot;&gt;
+            固定大小box
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background:#3ca14d;width:300px;color:white;font-size:30px;float:left&quot; class=&quot;js_oHerl o_table&quot;&gt;
+        &lt;div class=&quot;o_cell&quot;&gt;
+            跟随高度box
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;o_clearbox&quot;&gt;
+    &lt;div  class=&quot;objbox2 o_table&quot;&gt;
+        &lt;div class=&quot;o_cell&quot;&gt;
+            固定大小box
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;background:#3ca14d;width:300px;color:white;font-size:30px;float:left&quot; class=&quot;js_oHerl o_table&quot;&gt;
+        &lt;div class=&quot;o_cell&quot;&gt;
+            跟随高度box
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+    $(&quot;.js_oHerl&quot;).oHrel({
+      obj:&quot;$(this).prev()&quot;
+    }).init();
+</pre>
+<pre>
+    添加了js参数 obj:"代码",目标参数对象。注:代码写在引号内
+    之前的html参数保留 obj=".class" 但js参数级别更高。 
+</pre>
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+<script>
+    $(".js_oHerl").oHrel({
+      obj:"$(this).prev()"
+    }).init();
+</script>
+</body>
+</html>

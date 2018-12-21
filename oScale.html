@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oScale / 比例大小</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+    <style>
+        .box{width:100px;display:inline-block;margin-right:10px;background:#e543ae;color:white;font-size:20px}
+        @media (min-width:900px){
+            .box{width:200px;}
+        }
+    </style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+<!--START 主要内容-->
+<h1>oScale / 比例大小</h1>
+    <div class="js_box box" >1:1</div><!--没填参数 默认1：1-->
+    <div class="js_box2 box" >2:1</div><!--js传参 2:1-->
+    <div class="js_box box" w="2" h="3" base="width">2:3</div>
+    <p>适用于固定比例的元素，长或宽必须有一项有明确有值</p>
+    <pre>
+     &lt;!--css--&gt;
+         .box{width:100px;}
+        @media (min-width:1200px){
+            .box{width:200px;}
+        }
+
+   
+    &lt;!--使用方法1 js传参--&gt;
+    &lt;div class=&quot;js_box box&quot; &gt;1:1&lt;/div&gt;&lt;!--没填参数 默认1：1--&gt;
+    &lt;!--js--&gt;
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+
+    &lt;div class=&quot;js_box2 box&quot; &gt;2:1&lt;/div&gt;&lt;!--js传参 2：1--&gt;
+    &lt;!--js--&gt;
+    var box2=$(".js_box2").oScale({
+        w:2,
+        h:1
+        })//js传参
+    box2.init();
+
+
+    &lt;!--使用方法2 html传参--&gt;
+    &lt;div class=&quot;js_box box&quot; w=&quot;2&quot; h=&quot;3&quot; base=&quot;width&quot;&gt;2:3&lt;/div&gt;
+    &lt;!--js--&gt;
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+
+    
+    </pre>
+
+<!-- END 主要内容-->
+</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+<script>
+    var box1=$(".js_box").oScale()//创建方法
+    box1.init();//激活方法
+    var box2=$(".js_box2").oScale({
+        w:2,
+        h:1
+        })//js传参
+    box2.init();
+
+</script>
+</body>
+</html>

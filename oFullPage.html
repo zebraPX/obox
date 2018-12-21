@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oFullPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+    <style>
+    .codebox{position:absolute;top:0;}
+    .o_header{position: relative;z-index:999;}
+    .fullpage{text-align:right;color:black;font-size:40px}
+    </style>
+</head>
+<body>
+    <div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+      <!--START 主要内容-->
+      <div class="fullpage js_fullpage">
+        <div class="oPage" style="background:green">
+            1
+        </div>
+        <div class="oPage"  style="background:yellow">
+           2
+        </div>
+        <div class="oPage"  style="background:orange">
+            3
+        </div>
+        <div class="oPage"  style="background:darkkhaki">
+            4
+        </div>
+      </div>
+       <!-- END 主要内容-->
+       <div class="codebox">
+           <pre>
+      &lt;div class=&quot;fullpage js_fullpage&quot;&gt;
+        &lt;div class=&quot;oPage&quot; style=&quot;background:green&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:yellow&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:orange&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;oPage&quot;  style=&quot;background:darkkhaki&quot;&gt;4&lt;/div&gt;
+      &lt;/div&gt;
+
+      var fullpage=$(".js_fullpage").oFullPage({
+        playFn=function(i){
+            console.log(i);// 参数i（ 当前滚动第几屏）
+            }
+        })
+        fullpage.init();
+
+        //其他方法
+        fullpage.goto(i) //手动滚动到第几屏
+
+           </pre>
+      
+       </div>
+    </div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>    <script>
+        var fullpage=$(".js_fullpage").oFullPage({
+            playFn:function(i){
+                console.log(i);
+                
+            }
+        })
+        fullpage.init();
+        
+
+        
+    </script>
+</body>
+</html>

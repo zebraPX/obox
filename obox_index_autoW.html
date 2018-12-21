@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+<meta name="format-detection"content="telephone=no, email=no"/>
+<link rel="stylesheet" href="images/obox.css">
+<link rel="stylesheet" href="images/prettify.css">
+<link rel="stylesheet" href="images/base.css">
+<style>
+    h1{text-align:left;color:white;position:relative;background:#3ca14d;clear:both}
+    h1:after{content:"";display:block;clear :both;width:1px;}
+    textarea{display:block;border:1px solid #ededed;padding:10px;width:90%;max-height:150px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="o_body">
+    <div class="o_main">
+        <div class="o_header o_fixW o_autoH">
+		<!--START menu按钮 -->
+		<i class="o_menu_link js_menu_link1 o_icofont o-file"></i>
+
+		<!--START menu按钮 -->
+		<a href="obox_index.shtml"><img src="images/logo.png" class="logo" alt=""></a>
+
+		<div class="o_menu menu1 js_menu1">
+			<ul class="o_menulist">
+			</ul>
+		</div>
+	</div>
+        <!--START 主要内容外盒子-->
+        <div class="contbox o_autoW o_autoH">
+
+		<iframe src="autoW.html" frameborder="0" class="o_H100" style="margin:10px 2%;width:96%;height:600px!important" ></iframe>
+		<h2>用法:固定高度块 class="<span>o_fixW</span>" 自适应高度块 class="<span>o_autoW</span>" 子元素全高 class="<span>o_H100</span>"</h2>
+		<pre>
+&lt;div class="o_body" style="background:#6fef84"&gt;
+        &lt;div class="o_main"&gt;
+        &lt;!--START 布局--&gt;
+                &lt;div class="o_autoH"&gt;
+                    &lt;div class="o_H100 o_fixW o_xl-right" id="menu" style="width:200px"&gt; &lt;/div&gt;
+
+                    &lt;div class="o_H100 o_autoW o_color_demo" &gt;
+                        自适应区域           
+                    &lt;/div&gt;
+
+                    &lt;div class="o_H100 o_fixW " style="width:300px"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;!-- END 布局 --&gt;
+        &lt;/div&gt;
+  &lt;/div&gt;
+		</pre>
+		<h2>内部处置居中写法</h2>
+		<pre>
+&lt;div class="o_table "&gt;
+            &lt;div class="o_cell "&gt;
+            	垂直居中区域
+            &lt;/div&gt;
+        &lt;/div&gt;  
+		</pre>
+	</div>
+<!--END 主要内容外盒子结束-->
+</div>
+</div>
+<script src="images/jquery-1.8.3.min.js"></script>
+<script src="obox_js/obox-min.js"></script>
+<script src="images/base.js"></script>
+<script src="images/prettify.js"></script>
+</body>
+</html>
